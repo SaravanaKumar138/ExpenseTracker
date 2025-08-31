@@ -5,11 +5,22 @@ const TransactionList = () => {
     const {transactions} = useContext(GlobalContext);
 
   return (
-    <div className='w-40'>
-      <h1>History</h1>
-      <div>{transactions.map((transaction) => (
-        <li key={transaction.id} className='list-none flex justify-between shadow-md p-2'>{transaction.text}<span>${transaction.amount}</span> <button className='bg-red-700 text-white px-1'>X</button></li>
-      ))}</div>
+    <div className="w-40">
+      <h1 className="font-semibold p-2">History</h1>
+      <div>
+        {transactions.map((transaction) => (
+          <li
+            key={transaction.id}
+            className={`list-none flex justify-between shadow-md p-2 `}
+          >
+            {transaction.text}
+            <span className={`${transaction.amount > 0 ? "text-green-400" : "text-red-400"}`}>
+              ${transaction.amount}
+            </span>{" "}
+            <button className="bg-red-700 text-white px-1">X</button>
+          </li>
+        ))}
+      </div>
     </div>
   );
 }
