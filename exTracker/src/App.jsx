@@ -4,18 +4,18 @@ import Balance from './Balance'
 import IncomeExpense from './IncomeExpense'
 import TransactionList from './TransactionList'
 import AddTransaction from './AddTransaction'
-
+import { GlobalProvider } from './GlobalState'
 function App() {
 
 
   return (
-    <div>
+    <GlobalProvider>
       <Header />
       <Balance />
       <IncomeExpense />
       <TransactionList />
       <AddTransaction />
-    </div>
+    </GlobalProvider>
   )
 }
 
