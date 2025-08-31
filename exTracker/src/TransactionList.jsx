@@ -5,7 +5,7 @@ const TransactionList = () => {
     const {transactions, deleteTransaction} = useContext(GlobalContext);
 
   return (
-    <div className="w-40">
+    <div className="w-52">
       <h1 className="font-semibold p-2">History</h1>
       <div>
         {transactions.map((transaction) => (

@@ -9,14 +9,16 @@ function App() {
 
 
   return (
-    <GlobalProvider>
-      <Header />
-      <Balance />
-      <IncomeExpense />
-      <TransactionList />
-      <AddTransaction />
-    </GlobalProvider>
-  )
+    <div className='flex flex-col gap-2 justify-center items-center '>
+      <GlobalProvider>
+        <Header />
+        <Balance />
+        <IncomeExpense />
+        <TransactionList />
+        <AddTransaction />
+      </GlobalProvider>
+    </div>
+  );
 }
 
 export default App
