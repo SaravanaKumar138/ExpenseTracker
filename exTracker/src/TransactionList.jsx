@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { GlobalContext } from './GlobalState';
 
 const TransactionList = () => {
-    const {transactions} = useContext(GlobalContext);
+    const {transactions, deleteTransaction} = useContext(GlobalContext);
 
   return (
     <div className="w-40">
@@ -17,7 +17,7 @@ const TransactionList = () => {
             <span className={`${transaction.amount > 0 ? "text-green-400" : "text-red-400"}`}>
               ${transaction.amount}
             </span>{" "}
-            <button className="bg-red-700 text-white px-1">X</button>
+            <button className="bg-red-700 text-white px-1 cursor-pointer" onClick={() => deleteTransaction(transaction.id)}>X</button>
           </li>
         ))}
       </div>
