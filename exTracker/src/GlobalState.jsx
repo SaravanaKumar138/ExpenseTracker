@@ -10,6 +10,7 @@ const initialState = {
   ],
 };
 
+
 // Create context
 export const GlobalContext = createContext(initialState);
 

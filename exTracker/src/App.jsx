@@ -5,6 +5,7 @@ import IncomeExpense from './IncomeExpense'
 import TransactionList from './TransactionList'
 import AddTransaction from './AddTransaction'
 import { GlobalProvider } from './GlobalState'
+import Reducer from './Reducer'
 function App() {
 
 
@@ -17,6 +18,7 @@ function App() {
         <TransactionList />
         <AddTransaction />
       </GlobalProvider>
+      <Reducer />
     </div>
   );
 }
