@@ -8,6 +8,7 @@ const reducer = (state, action) => {
             return {count: state.count-1}
         default: return state
     }
+    
 }
 
 const Reducer = () => {

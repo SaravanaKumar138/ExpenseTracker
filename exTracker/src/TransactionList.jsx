@@ -13,6 +13,7 @@ const TransactionList = () => {
             key={transaction.id}
             className={`list-none flex justify-between shadow-md p-2 `}
           >
+            
             {transaction.text}
             <span className={`${transaction.amount > 0 ? "text-green-400" : "text-red-400"}`}>
               ${transaction.amount}
